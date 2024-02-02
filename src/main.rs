@@ -118,7 +118,7 @@ impl std::fmt::Display for Peer {
         if !self.protocols.is_empty() {
             print_key("Protocols", f)?;
             for protocol in &self.protocols {
-                writeln!(f, "\t- {protocol}")?;
+                writeln!(f, "\t- {:?}", protocol.as_ref())?;
             }
         }
 
